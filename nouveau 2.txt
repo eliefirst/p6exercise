@@ -1,0 +1,31 @@
+cd fronted
+npm install --force
+cd backend
+npm init
+cd backend
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:eliefirst/p6exercise.git
+git push -u origin main
+
+npm install -g nodemon
+npm install --save express
+
+pour le CORS
+De retour au fichier app.js , ajoutez le middleware suivant avant la route d'API :
+
+app.use((req, res, next) => {
+
+  res.setHeader('Access-Control-Allow-Origin', '*');
+
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
+
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+
+  next();
+
+});
+add npm install --save body-parser
+npm install --save mongoose
