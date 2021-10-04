@@ -32,3 +32,9 @@ npm install --save mongoose
 
 password 
 npm install --save mongoose-unique-validator
+
+users
+npm install --save bcrypt
+npm install --save jsonwebtoken
+
+npm install --save multer
